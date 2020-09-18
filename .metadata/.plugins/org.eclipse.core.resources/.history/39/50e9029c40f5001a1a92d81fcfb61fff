@@ -1,0 +1,19 @@
+package Graphs;
+
+import java.util.ArrayList;
+
+public class Implementation {
+	
+	static void addEdge(ArrayList<ArrayList<Integer>> adj, int v, int u) {
+		adj.get(v).add(u);
+		adj.get(u).add(v);
+	}
+	public static void main(String args[]) {
+		int v = 5;
+		ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(v);
+		for(int j = 0 ; j < v ; j++) {
+			adj.add(new ArrayList<Integer>(j));
+		}
+	}
+
+}

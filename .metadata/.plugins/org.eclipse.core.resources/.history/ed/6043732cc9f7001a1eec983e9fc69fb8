@@ -1,0 +1,108 @@
+package Searching;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Lab03Algo {
+	
+	static int lookupelement(int[] arr, int l , int r, int x) {
+		
+		if (r >= l) { 
+            int mid = l + (r - l) / 2; 
+  
+            if (arr[mid] == x) 
+            	return mid; 
+
+            else if (arr[mid] > x) 
+                return lookupelement(arr, l, mid - 1, x); 
+ 
+            return lookupelement(arr, mid + 1, r, x); 
+        } 
+		
+		return -1;
+	}
+	
+	static void findElement(int[] ar1, int[] cmp1) throws IOException {
+//		System.out.println("hello1");
+		int n1 = cmp1.length;
+//		System.out.println(n1);
+		int n2 = ar1.length;
+//		System.out.println(n2);
+		StringBuffer s5 = null;
+		for(int i = 0 ; i < n1 ; i++) {
+			s5.append(String.valueOf(lookupelement(ar1, 0 , n2, cmp1[i])));
+		}
+		
+		System.out.println(s5.toString());
+		
+		FileWriter writer = new FileWriter("C:\\Users\\18126\\Downloads\\testout.txt");  
+	    BufferedWriter buffer = new BufferedWriter(writer);  
+	    String s6 = s5.toString();
+	    buffer.write(s6);  
+	    
+	    buffer.close();  
+	    System.out.println("Success");  
+	}
+	
+	public static void main(String args[]) throws NumberFormatException, IOException {
+//		Lab03Algo lago = new Lab03Algo();
+		File file = new File("C:\\Users\\18126\\Downloads\\rosalind_bins (2).txt"); 
+		BufferedReader br = new BufferedReader(new FileReader(file)); 
+	
+		String st;
+		ArrayList<String> s1 = new ArrayList<String>();
+		while ((st = br.readLine()) != null) {
+			  s1.add(st);
+			  }
+		  int n1 = Integer.parseInt(s1.get(0));
+		  int n2 = Integer.parseInt(s1.get(1));
+		  int[] arr1 = new int[n1];
+		  int[] arr2 = new int[n2];
+		  String[] str1 = s1.get(2).split(" ");
+		  for (int i = 0; i < n1 ; i++) {
+//			  System.out.println(str1[i]);
+			  s1.add(str1[i]);
+		  }
+		  System.out.println(Arrays.toString(s1.get(0)));
+		  String[] str2 = s1.get(3).split(" ");
+		  for (int i = 0; i < n2 ; i++) {
+			  arr2[i] = Integer.parseInt(str2[i]);
+		  }
+		  
+//		  for (int i = 0 ; i < arr1.length ; i++) {
+//			  System.out.println(arr1[i]);
+//		  }
+		  String[] s11 = {"hello","hi"};
+		  System.out.println(Arrays.toString(s11));
+//		  for (int i = 0 ; i < arr2.length ; i++) {
+//			  System.out.println(arr2[i]);
+//		  }
+		  System.out.println("jello");
+		  System.out.println(Arrays.toString(arr2));
+		  
+//		  System.out.println(n1);
+//		  System.out.println(n2);
+//		  System.out.println(arr1.length);
+//		  System.out.println(arr2.length);
+		  findElement(arr1,arr2);
+//		  
+		  br.close();
+	}}
+
+
+
+
+
+	
+
+
+	
+	
+
+

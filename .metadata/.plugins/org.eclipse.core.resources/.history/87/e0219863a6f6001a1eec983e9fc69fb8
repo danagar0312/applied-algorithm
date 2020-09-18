@@ -1,0 +1,29 @@
+package Arrays;
+
+import java.util.Arrays;
+
+public class smallerNumbersThanCurrent {
+	public int[] smallerNumberCount(int[] nums){
+		int[] smaller = new int[101];
+		for(int i = 0 ; i < nums.length ; i++) {
+			smaller[nums[i]]++;
+		}
+		System.out.println(Arrays.toString(smaller));
+		
+		for (int i = 1; i < 101; i++) {
+            smaller[i] += smaller[i-1];
+        }
+		
+		System.out.println(Arrays.toString(smaller));
+		
+		
+		return nums;
+		
+	}
+	
+	public static void main(String args[]) {
+		smallerNumbersThanCurrent snmt = new smallerNumbersThanCurrent();
+		int[] a = {8,1,2,2,3};
+		snmt.smallerNumberCount(a);
+	}
+}

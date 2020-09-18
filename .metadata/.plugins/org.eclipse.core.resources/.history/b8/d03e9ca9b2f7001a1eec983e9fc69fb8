@@ -1,0 +1,42 @@
+package Searching;
+
+public class Lab03Algo {
+	
+	static int lookupelement(int[] arr, int l , int r, int x) {
+		
+		if (r >= l) { 
+            int mid = l + (r - l) / 2; 
+  
+            if (arr[mid] == x ||  x > arr[mid - 1] && mid == 0) 
+            	return mid; 
+
+            else if (arr[mid] > x) 
+                return lookupelement(arr, l, mid - 1, x); 
+ 
+            return lookupelement(arr, mid + 1, r, x); 
+        } 
+		
+		return -1;
+	}
+	
+	static void findElement(int[] arr1, int[] cmp1) {
+		
+		int n1 = cmp1.length;
+		int n2 = arr1.length;
+		for(int i = 0 ; i < n1 ; i++) {
+			int f1 = lookupelement(arr1, 0 , n2, cmp1[i]);
+			System.out.print(f1 + " ");
+		}
+	}
+	
+	public static void main(String args[]) {
+		Lab03Algo lago = new Lab03Algo();
+		int[] ar1 = new int[] {1,2,3,4,5,6,7,8,10,10,10,20,30,40,50};
+		int[] ar2 = new int[] {40,10,10,15,40,20};
+		findElement(ar1,ar2);
+	}
+	
+	
+	
+
+}

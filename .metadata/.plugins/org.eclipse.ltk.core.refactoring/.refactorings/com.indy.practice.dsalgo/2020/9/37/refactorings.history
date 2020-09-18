@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;recurrsion&apos; to &apos;recursion&apos;&#x0D;&#x0A;- Original project: &apos;com.indy.practice.dsalgo&apos;&#x0D;&#x0A;- Original element: &apos;com.indy.practice.dsalgo/src/main/java/recurrsion&apos;&#x0D;&#x0A;- Renamed element: &apos;com.indy.practice.dsalgo/src/main/java/recursion&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;recurrsion&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;recurrsion" name="recursion" qualified="false" references="true" stamp="1599877752562" textual="false" version="1.0"/>
+</session>

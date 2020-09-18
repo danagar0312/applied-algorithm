@@ -1,0 +1,22 @@
+package Searching;
+
+public class Lab03Algo {
+	
+	static int lookupelement(int[] arr, int l , int r, int x) {
+		
+		return -1;
+	}
+	
+	static void findElement(int[] arr1, int[] cmp1) {
+		
+	}
+	
+	public static void main(String args[]) {
+		Lab03Algo lago = new Lab03Algo();
+		int[] ar1 = new int[] {10,20,30,40,50};
+	}
+	
+	
+	
+
+}
