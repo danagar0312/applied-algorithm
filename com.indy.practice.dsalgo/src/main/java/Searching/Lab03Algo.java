@@ -36,12 +36,8 @@ public class Lab03Algo {
 			arrlist3.add(lookupelement(ar1, 0 , n1, ar2.get(i)));
 		}
 		
-//		for(Integer name:arrlist3) {
-//            System.out.print(name);
-//        }
-		
 		System.out.println(arrlist3.size());
-//		
+	
 		FileWriter writer = new FileWriter("C:\\Users\\18126\\Downloads\\testout.txt");  
 	    BufferedWriter buffer = new BufferedWriter(writer);  
 	    
@@ -52,7 +48,6 @@ public class Lab03Algo {
 	}
 	
 	public static void main(String args[]) throws NumberFormatException, IOException {
-//		Lab03Algo lago = new Lab03Algo();
 		File file = new File("C:\\Users\\18126\\Downloads\\rosalind_bins (5).txt"); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
 	
@@ -66,7 +61,6 @@ public class Lab03Algo {
 		  int[] arr1 = new int[n1];
 		  int[] arr2 = new int[n2];
 		  String[] str1 = s1.get(2).split(" ");
-//		  System.out.println(Arrays.toString(str1));
 		  ArrayList<Integer> arrlist1 = new ArrayList<Integer>(n1);
 		  ArrayList<Integer> arrlist2 = new ArrayList<Integer>(n2);
 		  for (int i = 0; i < n1 ; i++) {
