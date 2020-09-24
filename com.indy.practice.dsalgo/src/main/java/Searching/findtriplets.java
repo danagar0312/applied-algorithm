@@ -78,7 +78,7 @@ public class findtriplets {
 		// Driver program to test above functions 
 		public static void main(String[] args) 
 		{ 
-			FindTriplet triplet = new FindTriplet(); 
+			findtriplets triplet = new findtriplets(); 
 			int A[] = { 1, 4, 45, 6, 10, 8 }; 
 			int sum = 22; 
 			int arr_size = A.length; 

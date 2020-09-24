@@ -1,0 +1,111 @@
+package Sorting;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MergeSortLab04 {
+
+		void merge(int[] arr, int l, int m, int r) {
+			int n1 = m-l+1;
+			int n2 = r - m;
+			int L[] = new int[n1];
+			int R[] = new int[n2];
+			
+			for (int i = 0; i < n1; i++) {
+				L[i] = arr[i+l];
+			}
+			
+			for (int j = 0; j < n2; j++) {
+				R[j] = arr[m + j + 1];
+			}
+			
+			int i = 0, j = 0, k = l;
+		
+			while(i < n1 && j < n2 ) {
+				if(L[i] <= R[j]) {
+					arr[k] = L[i];
+					i++;
+				}
+				else {
+					arr[k] = R[j];
+					j++;
+				}
+				k++;
+			}
+			
+			while(i < n1) {
+				arr[k] = L[i];
+				i++;
+				k++;
+			}
+			
+			while(j < n2) {
+				arr[k] = R[j];
+				j++;
+				k++;
+			}
+		}
+		
+		
+		void sort(int[] arr,int l, int r) throws IOException {
+			if (l < r ) {
+				int m = (l + r)/2;
+				sort(arr, l , m);
+				sort(arr, m+1 , r);
+				merge(arr, l, m , r);
+				
+//				FileWriter writer = new FileWriter("C:\\Users\\18126\\Desktop\\lab04output.txt");  
+//			    BufferedWriter buffer = new BufferedWriter(writer);  
+//			    
+//			    buffer.write(arr.toString());  
+//			    
+//			    buffer.close();  
+//			    System.out.println("Success");  
+			}
+		}
+		
+		 public static void main(String args[]) throws IOException 
+		    { 
+			 
+			 	File file = new File("C:\\Users\\18126\\Downloads\\rosalind_ms.txt"); 
+				BufferedReader br = new BufferedReader(new FileReader(file)); 
+			
+				String st;
+				ArrayList<String> s1 = new ArrayList<String>();
+				while ((st = br.readLine()) != null) {
+					  s1.add(st);
+					  }
+				int n1 = Integer.parseInt(s1.get(0));
+				System.out.println(n1);
+				String[] str1 = s1.get(1).split(" ");
+				
+				System.out.println(Arrays.toString(str1));
+			 
+			 	
+//				int[] arr1 = new int[n1];
+//				
+//				for (int i = 0; i < n1 ; i++) {
+////					  arrlist1.add(Integer.parseInt(str1[i]));
+//					arr1[i] = Integer.parseInt(str1[i]);
+//				} 
+//		        MergeSort ob = new MergeSort(); 
+//		        ob.sort(arr1, 0, arr1.length - 1); 
+//		        
+//		        System.out.println(Arrays.toString(arr1));
+		        FileWriter writer = new FileWriter("C:\\Users\\18126\\Desktop\\lab04output.txt");  
+			    BufferedWriter buffer = new BufferedWriter(writer);  
+			    
+			    buffer.write(Arrays.toString(str1));  
+			    buffer.close();  
+			    System.out.println("Success");
+		  
+		    } 
+	
+
+}

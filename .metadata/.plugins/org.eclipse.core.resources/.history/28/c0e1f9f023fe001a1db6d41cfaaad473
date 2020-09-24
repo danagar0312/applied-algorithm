@@ -1,0 +1,21 @@
+package Sorting;
+
+
+class Interval
+{
+    int start,end;
+     
+    Interval(int start, int end)
+    {
+        this.start=start;
+        this.end=end;
+    }
+}
+
+public class MergeOverlappingIntervals {
+	
+	Arrays.sort(arr, new Comparator<Interval>() {
+		
+	});
+
+}

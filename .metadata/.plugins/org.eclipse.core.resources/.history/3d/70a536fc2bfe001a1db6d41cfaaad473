@@ -1,0 +1,24 @@
+package Sorting;
+
+import java.util.Arrays;
+
+public class FindMaximumGuests {
+	
+
+	static void findMaxGuests(int arr[], int exit[], 
+            int n)     
+	{ 
+		Arrays.sort(arr);
+		Arrays.sort(exit);
+		
+	}
+	
+	
+	public static void main(String[] args) 
+    { 
+        int arrl[] = {1, 2, 10, 5, 5}; 
+        int exit[] = {4, 5, 12, 9, 12}; 
+        int n = arrl.length; 
+        findMaxGuests(arrl, exit, n); 
+    } 
+}
